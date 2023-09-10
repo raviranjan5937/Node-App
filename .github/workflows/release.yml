@@ -10,6 +10,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - run: docker build . -t github-actions-demo-nest-app
+      - run: docker build . -t raviranjan5937/github-actions-demo-nest-app
       - run: echo ${{secrets.DOCKERHUB_PASSWORD}} | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin
-      - run: docker push github-actions-demo-nest-app
+      - run: docker push raviranjan5937/github-actions-demo-nest-app
